@@ -2,6 +2,7 @@
 TRAP 0x29 ; player position
 TRAP 0x27
 TRAP 0x2D
+ADD R1, R1, #1
 TRAP 0x27
 LD R3, BLOCK_ID_GLASS
 TRAP 0x27
