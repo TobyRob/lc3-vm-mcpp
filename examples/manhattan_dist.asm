@@ -75,13 +75,13 @@ SKIP_Z_B
 
 
 ;CLEARING REG
-AND R7 R7 #0
+AND R4 R4 #0
 ; changing to negative to minus
 NOT R5 R5
 ADD R5 R5 #1
 
 ; seeing which is bigger
-ADD R7 R6 R5 ; r5 is a DIFFERENCE r6 is b difference, if its negative r5 A has a bigger difference therefore B (r6) is closer
+ADD R4 R6 R5 ; r5 is a DIFFERENCE r6 is b difference, if its negative r5 A has a bigger difference therefore B (r6) is closer
 TRAP 0x27
 BRp A_BIG
 BRn  B_BIG
