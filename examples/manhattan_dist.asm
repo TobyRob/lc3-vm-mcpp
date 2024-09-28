@@ -83,7 +83,7 @@ ADD R5 R5 #1
 
 ; seeing which is bigger
 ADD R4 R6 R5 ; r5 is a DIFFERENCE r6 is b difference, if its negative r5 A has a bigger difference therefore B (r6) is closer
-TRAP 0x27
+
 BRn  B_BIG
 BRp A_BIG
 BRz ZERO
