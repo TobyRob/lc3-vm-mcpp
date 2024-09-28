@@ -82,9 +82,9 @@ NOT R5 R5
 ADD R5 R5 #1
 
 ; seeing which is bigger
-ADD R7 R6 R5
-BRp B_BIG
-BRn  A_BIG
+ADD R7 R6 R5 ; r5 is a r6 is b difference, if its negative r5 A has a bigger difference therefore B (r6) is closer
+BRp A_BIG
+BRn  B_BIG
 BRz ZERO
 
 A_BIG
