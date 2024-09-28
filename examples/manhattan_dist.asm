@@ -73,7 +73,6 @@ JSR NEGATIVE_Z_B
 
 SKIP_Z_B
 
-TRAP 0x27
 
 ;CLEARING REG
 AND R7 R7 #0
@@ -82,7 +81,8 @@ NOT R5 R5
 ADD R5 R5 #1
 
 ; seeing which is bigger
-ADD R7 R6 R5 ; r5 is a r6 is b difference, if its negative r5 A has a bigger difference therefore B (r6) is closer
+ADD R7 R6 R5 ; r5 is a DIFFERENCE r6 is b difference, if its negative r5 A has a bigger difference therefore B (r6) is closer
+TRAP 0x27
 BRp A_BIG
 BRn  B_BIG
 BRz ZERO
