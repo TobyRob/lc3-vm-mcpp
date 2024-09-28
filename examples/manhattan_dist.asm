@@ -83,8 +83,8 @@ ADD R5 R5 #1
 
 ; seeing which is bigger
 ADD R7 R6 R5
-BRn  A_BIG
 BRp B_BIG
+BRn  A_BIG
 BRz ZERO
 
 A_BIG
