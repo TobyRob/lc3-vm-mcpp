@@ -76,6 +76,7 @@ SKIP_Z_B
 
 ;CLEARING REG
 AND R4 R4 #0
+TRAP 0x27
 ; changing to negative to minus
 NOT R5 R5
 ADD R5 R5 #1
