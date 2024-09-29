@@ -3,9 +3,11 @@
 TRAP 0x29 ; player position r0 x r1 y r2 z
 ; r3 is block id
 LD R6 NUMBER_TO_CONVERT
+
 ADD R2 R2 #1
 
 LD R5 ONE
+
 AND R4 R6 R5 ; 100000000000000
 BRp S_1
 BRz F_1
