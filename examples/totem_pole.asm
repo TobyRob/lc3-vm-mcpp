@@ -1,0 +1,21 @@
+.ORIG x3000
+TRAP 0x29
+ADD R0 R0 #2
+TRAP 0x2D
+ADD R1 R1 #1
+
+ADD R3 R3 #14 ; START GOLD
+LD R4 HEIGHT
+
+LOOP
+TRAP 0x2C
+ADD R3 R3 #1
+ADD R1 R1 #1
+ADD R4 R4 #-1
+BRp LOOP
+
+
+HALT
+HEIGHT .FILL #18 ; Note: Please do not change the name of this constant
+
+.END
