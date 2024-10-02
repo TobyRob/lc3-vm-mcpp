@@ -1,6 +1,7 @@
 .ORIG x3000
 TRAP 0x29 ; player position, r0,r1,r2
 STI R1 Y_VALUE; KEEPING PLAYER Y VALUE
+ADD R3 R3 R1
 
 ; have to do first to have a starting point for lwoest
 TRAP 0x2D ; r1 now holds HIGHEST POINT AT OG SPOT 
