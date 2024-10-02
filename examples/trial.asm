@@ -48,10 +48,10 @@ SKIP_X_B
 LD R3 B_Y
 ADD R1 R1 #0
 BRn NEGY_B ;CHECKS IF NEGATIVE
-JSR POSITIVE_Y_B
+JSR POSITIVE
 BRnzp SKIP_Y_B ; skips negative jump
 NEGY_B ; JUMPS IF NEGATIVE
-JSR NEGATIVE_Y_B
+JSR NEGATIVE
 SKIP_Y_B
 
 ; Z COORDINATE
@@ -82,7 +82,6 @@ ADD R4 R5 R6 ; r5 is A DIFFERENCE r6 is B difference, if its negative r5 A has a
 BRp B_BIG
 BRn A_BIG
 BRz ZERO
-
 
 A_BIG
 AND R0 R0 #0
@@ -142,4 +141,5 @@ B_Z .FILL #-8
 A_BIGGER .STRINGZ "The player is closer to point A"
 B_BIGGER .STRINGZ	"The player is closer to point B"
 EQUAL .STRINGZ "The player is equally far from both points"
+
 .END
