@@ -35,7 +35,7 @@ ST R5 A_DIFF
 AND R5 R5 #0
 
 ;CHECKS X COOR
-LD R3 B_X
+LDI R3 B_X
 ADD R0 R0 #0
 BRn NEGX_B ;CHECKS IF NEGATIVE
 JSR POSITIVE
@@ -82,7 +82,7 @@ ADD R4 R5 R6 ; r5 is A DIFFERENCE r6 is B difference, if its negative r5 A has a
 BRp B_BIG
 BRn A_BIG
 BRz ZERO
-HALT
+
 
 A_BIG
 AND R0 R0 #0
