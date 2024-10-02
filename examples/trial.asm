@@ -90,12 +90,12 @@ SKIPZ_B
 
 ;CLEARING REG
 AND R4 R4 #0
-TRAP 0x27
 ; changing to negative to minus
 AND R6 R6 #0
 ADD R6 R6 R5
 AND R5 R5 #0
 LDI R5 A_DIFF
+TRAP 0x27
 NOT R6 R6
 ADD R6 R6 #1
 
