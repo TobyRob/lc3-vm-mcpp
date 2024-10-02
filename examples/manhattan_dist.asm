@@ -58,15 +58,16 @@ SKIP_Z_B
 
 ;CLEARING REG
 AND R4 R4 #0
+TRAP 0x27
 ; changing to negative to minus
 NOT R6 R6
 ADD R6 R6 #1
 
 ; seeing which is bigger
-ADD R4 R6 R5 ; r5 is A DIFFERENCE r6 is B difference, if its negative r5 A has a bigger difference therefore B (r6) is closer
-TRAP 0x27
-BRn A_BIG
-BRp B_BIG
+ADD R4 R5 R6 ; r5 is A DIFFERENCE r6 is B difference, if its negative r5 A has a bigger difference therefore B (r6) is closer
+
+BRn B_BIG
+BRp A_BIG
 BRz ZERO
 HALT
 
@@ -87,9 +88,6 @@ AND R0 R0 #0
 LEA R0 EQUAL
 TRAP 0x28
 HALT
-
-;R5 and R6 IS TOTAL FOR A DIFFERENCE
-HALT 
 
 NEGATIVE_X
 ; R3 IS COORDINATE
