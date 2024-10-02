@@ -289,9 +289,9 @@ RET
 A_X .FILL #1
 A_Y .FILL #2
 A_Z .FILL #3
-B_X .FILL #1
-B_Y .FILL #2
-B_Z .FILL #3
+B_X .FILL #20
+B_Y .FILL #32
+B_Z .FILL #-8
 A_BIGGER .STRINGZ "The player is closer to point A"
 B_BIGGER .STRINGZ	"The player is closer to point B"
 EQUAL .STRINGZ "The player is equally far from both points"
